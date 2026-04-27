@@ -2,468 +2,397 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Cepas Wine Boutique & Club</title>
-<meta name="description" content="Vinos seleccionados, club de vinos y regalos empresariales en Santo Tomé.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cepas Wine Boutique & Club | Selección Exclusiva</title>
+<meta name="description" content="Vinos seleccionados, club de vinos y regalos empresariales en Santo Tomé, Santa Fe.">
+<meta name="keywords" content="vino, club de vinos, regalos empresariales, malbec, cepas wine boutique">
+<meta name="author" content="Cepas Wine Boutique & Club">
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:Georgia, serif;
-background:#060606;
-color:#fff;
-overflow-x:hidden;
+background:#070707;
+color:#f5e6b8;
+line-height:1.5;
 }
-
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.88)),
-url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1800&q=80');
-background-size:cover;
-background-position:center;
-z-index:-2;
-}
-
-body::after{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at top left, rgba(212,175,55,.08), transparent 30%),
-radial-gradient(circle at bottom right, rgba(212,175,55,.05), transparent 25%);
-z-index:-1;
-}
-
+a{text-decoration:none;color:inherit}
 header{
-padding:18px 6%;
+position:fixed;
+top:0;left:0;width:100%;
+z-index:999;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(212,175,55,.25);
+}
+.nav{
+max-width:1400px;
+margin:auto;
+padding:16px 24px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-bottom:1px solid rgba(212,175,55,.18);
-backdrop-filter:blur(5px);
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(0,0,0,.55);
+gap:20px;
 }
-
-.logo-mini{
+.logo{
 display:flex;
 align-items:center;
 gap:12px;
+font-weight:bold;
+letter-spacing:1px;
+font-size:18px;
 }
-
-.logo-mini img{
-width:58px;
-height:58px;
+.logo img{
+width:56px;height:56px;
 border-radius:50%;
 object-fit:cover;
 border:2px solid #d4af37;
-box-shadow:0 0 12px rgba(212,175,55,.35);
 }
-
-.logo-mini span{
-font-size:1rem;
-letter-spacing:1px;
-color:#d4af37;
-font-weight:bold;
+.menu{
+display:flex;
+gap:28px;
+font-family:Arial,sans-serif;
+font-size:14px;
+text-transform:uppercase;
 }
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:24px;
-font-size:.95rem;
-transition:.3s;
+.menu a:hover{color:#d4af37}
+.btn-top{
+padding:10px 18px;
+border:1px solid #d4af37;
+border-radius:10px;
+font-family:Arial,sans-serif;
 }
-
-nav a:hover{
-color:#d4af37;
-}
-
 .hero{
-min-height:92vh;
+min-height:100vh;
+padding:130px 30px 80px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
 align-items:center;
-padding:60px 7%;
+gap:40px;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80') center/cover;
 }
-
-.hero-logo{
+.hero-left{
 text-align:center;
 }
-
-.hero-logo img{
-width:440px;
+.hero-left img{
+width:420px;
 max-width:100%;
 border-radius:50%;
-border:5px solid #d4af37;
-box-shadow:0 0 40px rgba(212,175,55,.25);
-animation:float 4s ease-in-out infinite;
+border:4px solid #d4af37;
+box-shadow:0 0 35px rgba(212,175,55,.45);
 }
-
-@keyframes float{
-0%,100%{transform:translateY(0px);}
-50%{transform:translateY(-10px);}
-}
-
-.hero-text h1{
-font-size:4rem;
-line-height:1.1;
+.hero-right h1{
+font-size:68px;
+line-height:1.05;
 margin-bottom:18px;
-color:#f6e5b8;
 }
-
-.hero-text p{
-font-size:1.18rem;
+.hero-right p{
+font-family:Arial,sans-serif;
+font-size:22px;
 color:#ddd;
 max-width:620px;
-margin-bottom:28px;
-line-height:1.8;
+margin-bottom:26px;
 }
-
-.gold-line{
-width:140px;
-height:2px;
-background:#d4af37;
-margin:20px 0;
-}
-
-.btns{
+.hero-buttons{
 display:flex;
 flex-wrap:wrap;
-gap:14px;
+gap:15px;
 }
-
-.btn{
-padding:15px 28px;
-text-decoration:none;
-border-radius:40px;
+.btn-gold,.btn-dark{
+padding:16px 26px;
+border-radius:12px;
+font-family:Arial,sans-serif;
 font-weight:bold;
-transition:.3s;
-display:inline-block;
 }
-
 .btn-gold{
 background:#d4af37;
 color:#111;
 }
-
-.btn-gold:hover{
-transform:translateY(-3px);
-background:#f1ca55;
-}
-
 .btn-dark{
 border:1px solid #d4af37;
-color:#fff;
 }
-
-.btn-dark:hover{
-background:#d4af37;
-color:#111;
+.section{
+max-width:1400px;
+margin:auto;
+padding:80px 25px;
 }
-
-section{
-padding:80px 7%;
-}
-
 .title{
-font-size:2.6rem;
-color:#f6e5b8;
-margin-bottom:40px;
-text-align:center;
+font-size:48px;
+margin-bottom:10px;
 }
-
-.grid3{
+.subtitle{
+font-family:Arial,sans-serif;
+color:#bbb;
+margin-bottom:35px;
+}
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
-
 .card{
-background:rgba(17,17,17,.88);
-border:1px solid rgba(212,175,55,.18);
-border-radius:20px;
-padding:28px;
-box-shadow:0 12px 28px rgba(0,0,0,.35);
+background:#111;
+border:1px solid rgba(212,175,55,.25);
+border-radius:18px;
+padding:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
-
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:15px;
+}
 .card h3{
+font-size:30px;
+margin-bottom:8px;
+}
+.card p{
+font-family:Arial,sans-serif;
+color:#ccc;
+margin-bottom:10px;
+}
+.price{
+font-size:28px;
 margin-bottom:15px;
 color:#d4af37;
-font-size:1.35rem;
 }
-
-.card p{
-color:#ddd;
-line-height:1.8;
+.plans{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
-
-.club{
-background:
-linear-gradient(rgba(30,0,0,.82),rgba(0,0,0,.88));
-}
-
 .plan{
+background:linear-gradient(180deg,#1a0000,#0c0c0c);
+border:1px solid rgba(212,175,55,.3);
+border-radius:20px;
+padding:30px;
 text-align:center;
 }
-
-.price{
-font-size:2rem;
-margin:18px 0;
-color:#f6e5b8;
+.plan h3{font-size:34px;margin-bottom:8px}
+.plan .small{font-family:Arial;color:#ddd;margin-bottom:18px}
+.plan ul{
+list-style:none;
+font-family:Arial;
+margin-bottom:18px;
 }
-
+.plan li{margin:8px 0}
+.plan .price{
+font-size:38px;
+}
 footer{
-padding:40px 7%;
-border-top:1px solid rgba(212,175,55,.18);
-text-align:center;
 background:#050505;
+border-top:1px solid rgba(212,175,55,.25);
+padding:50px 25px;
 }
-
-footer a{
-color:#d4af37;
-text-decoration:none;
+.footer-grid{
+max-width:1400px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
 }
-
+footer h4{
+margin-bottom:10px;
+font-size:24px;
+}
+footer p, footer a{
+font-family:Arial,sans-serif;
+color:#ccc;
+margin:6px 0;
+display:block;
+}
+.copy{
+text-align:center;
+margin-top:30px;
+font-family:Arial;
+color:#888;
+}
 .whatsapp{
 position:fixed;
 right:18px;
 bottom:18px;
 background:#25D366;
 color:#fff;
-padding:15px 18px;
+padding:16px 18px;
 border-radius:50px;
 font-weight:bold;
-text-decoration:none;
-box-shadow:0 8px 25px rgba(0,0,0,.35);
+font-family:Arial;
 z-index:999;
+box-shadow:0 0 18px rgba(0,0,0,.4);
 }
-
 @media(max-width:980px){
-
 .hero{
 grid-template-columns:1fr;
 text-align:center;
 }
-
-.gold-line{
-margin:20px auto;
-}
-
-.btns{
-justify-content:center;
-}
-
-.hero-text h1{
-font-size:2.8rem;
-}
-
-nav{
-display:none;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero-logo img{
-width:290px;
-}
-
-.hero-text h1{
-font-size:2.2rem;
-}
-
-.title{
-font-size:2rem;
-}
-
+.hero-right h1{font-size:46px}
+.hero-buttons{justify-content:center}
+.menu{display:none}
 }
 </style>
 </head>
 <body>
 
 <header>
-
-<div class="logo-mini">
-<img src="cepaslogo.jpeg">
+<div class="nav">
+<div class="logo">
+<img src="cepaslogo.jpeg" alt="Cepas Wine Boutique">
 <span>CEPAS WINE BOUTIQUE & CLUB</span>
 </div>
 
-<nav>
+<nav class="menu">
 <a href="#inicio">Inicio</a>
 <a href="#vinos">Vinos</a>
-<a href="#club">Club</a>
+<a href="#club">Club de Vinos</a>
 <a href="#empresas">Empresas</a>
+<a href="#nosotros">Sobre Nosotros</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
+<a class="btn-top" href="https://wa.me/543425786817" target="_blank">WhatsApp</a>
+</div>
 </header>
 
 <section class="hero" id="inicio">
-
-<div class="hero-logo">
-<img src="cepaslogo.jpeg">
+<div class="hero-left">
+<img src="cepaslogo.jpeg" alt="Logo Cepas">
 </div>
 
-<div class="hero-text">
+<div class="hero-right">
 <h1>Vinos seleccionados.<br>Experiencias exclusivas.</h1>
-<div class="gold-line"></div>
-<p>
-Descubrí etiquetas únicas, asesoramiento personalizado y beneficios premium para disfrutar el vino como se debe.
-</p>
+<p>Etiquetas únicas, asesoramiento personalizado y beneficios premium para disfrutar el vino como se debe.</p>
 
-<div class="btns">
-<a class="btn btn-gold" href="https://wa.me/543425786817?text=Hola quiero comprar vinos">Comprar Ahora</a>
-<a class="btn btn-dark" href="https://wa.me/543425786817?text=Hola quiero sumarme al Club">Club de Vinos</a>
-<a class="btn btn-dark" href="https://wa.me/543425786817?text=Hola quiero regalos empresariales">Empresas</a>
+<div class="hero-buttons">
+<a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Comprar Ahora</a>
+<a class="btn-dark" href="#club">Sumarme al Club</a>
+<a class="btn-dark" href="#empresas">Empresas</a>
 </div>
-
 </div>
-
 </section>
 
-<section id="vinos">
-
+<section class="section" id="vinos">
 <h2 class="title">Elegidos para vos</h2>
+<p class="subtitle">Selección destacada de etiquetas premium</p>
 
-<div class="grid3">
+<div class="grid">
 
 <div class="card">
-<h3>Alta Vista Malbec</h3>
-<p>Profundo, elegante y complejo. Ideal para carnes rojas y momentos especiales.</p>
+<img src="https://images.unsplash.com/photo-1569919659476-f0852f6834b7?auto=format&fit=crop&w=800&q=80">
+<h3>Alta Vista Atemporal Malbec</h3>
+<p>Mendoza, Argentina. Elegante y complejo.</p>
+<div class="price">$18.500</div>
+<a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Pedir por WhatsApp</a>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=800&q=80">
 <h3>Catena Chardonnay</h3>
-<p>Fresco, frutal y equilibrado. Excelente para pescados y celebraciones.</p>
+<p>Fresco, frutal y equilibrado.</p>
+<div class="price">$15.900</div>
+<a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Pedir por WhatsApp</a>
 </div>
 
 <div class="card">
-<h3>Rutini Cabernet</h3>
-<p>Estructurado e intenso, con gran potencial de guarda.</p>
+<img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=800&q=80">
+<h3>Rutini Cabernet Sauvignon</h3>
+<p>Estructurado, intenso y gran guarda.</p>
+<div class="price">$22.900</div>
+<a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Pedir por WhatsApp</a>
 </div>
 
 </div>
-
 </section>
 
-<section class="club" id="club">
+<section class="section" id="club">
+<h2 class="title">Elegí tu experiencia</h2>
+<p class="subtitle">Club mensual con beneficios exclusivos</p>
 
-<h2 class="title">Club de Vinos</h2>
+<div class="plans">
 
-<div class="grid3">
-
-<div class="card plan">
+<div class="plan">
 <h3>Esencial</h3>
-<div class="price">2 Botellas</div>
-<p>Selección mensual + beneficios exclusivos.</p>
+<p class="small">2 botellas / mes</p>
+<ul>
+<li>Selección mensual</li>
+<li>Descuentos</li>
+<li>Acceso preventas</li>
+</ul>
+<div class="price">$19.900</div>
+<a class="btn-gold" href="https://wa.me/543425786817">Sumarme</a>
 </div>
 
-<div class="card plan">
+<div class="plan">
 <h3>Reserva</h3>
-<div class="price">3 Premium</div>
-<p>Etiquetas superiores + acceso prioritario.</p>
+<p class="small">3 botellas / mes</p>
+<ul>
+<li>Selección premium</li>
+<li>15% OFF</li>
+<li>Eventos exclusivos</li>
+</ul>
+<div class="price">$29.900</div>
+<a class="btn-gold" href="https://wa.me/543425786817">Sumarme</a>
 </div>
 
-<div class="card plan">
+<div class="plan">
 <h3>Gran Reserva</h3>
-<div class="price">5 Elite</div>
-<p>Experiencia total para amantes del vino.</p>
+<p class="small">5 botellas / mes</p>
+<ul>
+<li>Alta gama</li>
+<li>20% OFF</li>
+<li>Regalos VIP</li>
+</ul>
+<div class="price">$49.900</div>
+<a class="btn-gold" href="https://wa.me/543425786817">Sumarme</a>
 </div>
 
 </div>
-
 </section>
 
-<section id="empresas">
+<section class="section" id="empresas">
+<h2 class="title">Impresioná con elegancia</h2>
+<p class="subtitle">Regalos empresariales personalizados</p>
 
-<h2 class="title">Regalos Empresariales</h2>
-
-<div class="grid3">
-
-<div class="card">
-<h3>Clientes VIP</h3>
-<p>Regalos premium para fortalecer relaciones comerciales.</p>
-</div>
-
-<div class="card">
-<h3>Fin de Año</h3>
-<p>Packs elegantes para empresas y equipos de trabajo.</p>
-</div>
-
-<div class="card">
-<h3>Personalizados</h3>
-<p>Presentaciones exclusivas con identidad de marca.</p>
-</div>
-
-</div>
-
-<section id="instagram" style="padding:80px 20px;background:#111;text-align:center;">
-<h2 style="font-size:42px;color:#d4af37;margin-bottom:15px;">
-Seguinos en Instagram
-</h2>
-
-<p style="color:#eee;font-size:20px;margin-bottom:40px;">
-Descubrí novedades, etiquetas exclusivas y experiencias premium.
-</p>
-
-<a href="https://instagram.com/cepaswineboutique" target="_blank" style="
-display:inline-block;
-padding:16px 34px;
-border-radius:40px;
-background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:18px;
-margin-bottom:50px;
-box-shadow:0 0 25px rgba(0,0,0,.4);
-">
-@cepaswineboutique
-</a>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
-">
-
-<div style="background:#1a1a1a;padding:50px;border-radius:18px;color:#d4af37;"> Nuevos ingresos</div>
-
-<div style="background:#1a1a1a;padding:50px;border-radius:18px;color:#d4af37;"> Regalos empresariales</div>
-
-<div style="background:#1a1a1a;padding:50px;border-radius:18px;color:#d4af37;"> Club de vinos</div>
-
-<div style="background:#1a1a1a;padding:50px;border-radius:18px;color:#d4af37;"> Experiencias premium</div>
-
+<div class="grid">
+<div class="card"><h3>Packs Corporativos</h3><p>Clientes, eventos y colaboradores.</p></div>
+<div class="card"><h3>Calidad Premium</h3><p>Las mejores etiquetas para representar tu marca.</p></div>
+<div class="card"><h3>Atención Dedicada</h3><p>Asesoramiento completo y entrega coordinada.</p></div>
 </div>
 </section>
 
 <footer id="contacto">
+<div class="footer-grid">
 
-<p><strong>Cepas Wine Boutique & Club</strong></p>
+<div>
+<h4>Cepas Wine Boutique</h4>
+<p>Selección Exclusiva</p>
+</div>
+
+<div>
+<h4>Contacto</h4>
+<a href="tel:+543425786817">+54 342 5786817</a>
+<a href="mailto:info@cepaswineboutique.ar">info@cepaswineboutique.ar</a>
+</div>
+
+<div>
+<h4>Ubicación</h4>
 <p>Santo Tomé, Santa Fe</p>
-<p><a href="https://cepaswineboutique.ar">www.cepaswineboutique.ar</a></p>
-<p><a href="https://instagram.com/">Instagram Oficial</a></p>
+<p>Argentina</p>
+</div>
 
+<div>
+<h4>Seguinos</h4>
+<a href="https://instagram.com/cepaswineboutique" target="_blank">@cepaswineboutique</a>
+</div>
+
+</div>
+
+<div class="copy">© 2026 Cepas Wine Boutique & Club. Todos los derechos reservados.</div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/543425786817?text=Hola quiero información">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/543425786817" target="_blank">WhatsApp</a>
 
 </body>
 </html>
