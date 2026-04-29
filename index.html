@@ -15,6 +15,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
+backdrop-filter:blur(4px);
 background:
 radial-gradient(circle at center,#1a1200 0%,#070707 35%,#000 100%);
 z-index:999999;
@@ -22,8 +23,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 overflow:hidden;
-animation:legendFadeOut 1.4s ease forwards;
-animation-delay:4.8s;
+animation:legendFadeOut .9s ease forwards;
+animation-delay:3.5s;
 }
 
 /* PARTÍCULAS */
@@ -46,10 +47,10 @@ opacity:.9;
 position:relative;
 z-index:3;
 text-align:center;
-animation:legendRise 2.2s ease;
 padding:20px;
+animation:legendRise 2.2s ease, floatlogo 3s ease-in-out infinite;
 }
-
+ 
 .legend-ring{
 width:180px;
 height:180px;
@@ -181,6 +182,11 @@ visibility:hidden;
 }
 }
 
+@keyframes floatLogo{
+0%,100%{transform:traslateY(0);}
+50%{transform:translateY(-10px);}
+}
+ 
 /* MOBILE */
 
 @media(max-width:768px){
