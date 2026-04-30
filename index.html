@@ -429,6 +429,70 @@ text-align:center;
 .hero-buttons{justify-content:center}
 .menu{display:none}
 }
+ 
+ /* TARJETA PREMIUM */
+
+.premium-wine{
+position:relative;
+overflow:hidden;
+border:1px solid rgba(212,175,55,.35);
+box-shadow:
+0 10px 30px rgba(0,0,0,.6),
+0 0 20px rgba(212,175,55,.15);
+transition:.4s;
+}
+
+.premium-wine:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:
+0 20px 50px rgba(0,0,0,.8),
+0 0 30px rgba(212,175,55,.25);
+}
+
+/* BADGE PREMIO */
+
+.award-badge{
+position:absolute;
+top:15px;
+left:15px;
+background:linear-gradient(135deg,#d4af37,#fff0b0);
+color:#000;
+font-size:12px;
+font-weight:bold;
+padding:6px 10px;
+border-radius:20px;
+box-shadow:0 0 10px rgba(212,175,55,.6);
+z-index:2;
+}
+
+/* TAGS */
+
+.wine-tags{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-bottom:12px;
+}
+
+.wine-tags span{
+background:rgba(212,175,55,.15);
+border:1px solid rgba(212,175,55,.3);
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+font-family:Arial;
+color:#d4af37;
+}
+
+/* EFECTO IMAGEN */
+
+.premium-wine img{
+transition:.5s;
+}
+
+.premium-wine:hover img{
+transform:scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -497,11 +561,33 @@ text-align:center;
 <a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Pedir por WhatsApp</a>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=800&q=80">
-<h3>Catena Chardonnay</h3>
-<p>Fresco, frutal y equilibrado.</p>
-<a class="btn-gold" href="https://wa.me/543425786817" target="_blank">Pedir por WhatsApp</a>
+<div class="card premium-wine">
+
+  <!-- BADGE PREMIO -->
+  <div class="award-badge">🏅 Terruño de Oro 2025</div>
+
+  <!-- IMAGEN -->
+  <img src="ara-tannat.jpg" alt="Ara Tannat 2023 - Los Aromitos">
+
+  <!-- INFO -->
+  <h3>Ara Tannat 2023</h3>
+  <p>Los Aromitos, Entre Ríos. Potente, elegante y premiado internacionalmente.</p>
+
+  <!-- ATRIBUTOS -->
+  <div class="wine-tags">
+    <span>Tannat</span>
+    <span>Premium</span>
+    <span>Premiado</span>
+  </div>
+
+  <!-- PRECIO -->
+  <div class="price">$24.900</div>
+
+  <!-- CTA -->
+  <a class="btn-gold" href="https://wa.me/543425786817" target="_blank">
+    Comprar por WhatsApp
+  </a>
+
 </div>
 
 <div class="card">
