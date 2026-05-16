@@ -451,6 +451,286 @@ box-shadow:
 
 @media(max-width:980px){
 
+/* ==========================
+SECCIONES PREMIUM
+========================== */
+
+.section{
+padding:120px 28px;
+max-width:1400px;
+margin:auto;
+}
+
+.title{
+font-size:52px;
+text-align:center;
+margin-bottom:14px;
+color:#f5e6b8;
+}
+
+.subtitle{
+text-align:center;
+font-family:Arial,sans-serif;
+color:#b8b8b8;
+margin-bottom:60px;
+font-size:18px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:34px;
+}
+
+/* CARD PREMIUM */
+
+.card{
+position:relative;
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.02)
+);
+border:
+1px solid rgba(212,175,55,.18);
+border-radius:28px;
+overflow:hidden;
+padding:22px;
+transition:.4s;
+backdrop-filter:blur(12px);
+box-shadow:
+0 20px 60px rgba(0,0,0,.35);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:
+rgba(212,175,55,.4);
+box-shadow:
+0 25px 80px rgba(212,175,55,.12);
+}
+
+.card img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:22px;
+transition:.4s;
+}
+
+.card:hover img{
+transform:scale(1.03);
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:10px;
+color:#f5e6b8;
+}
+
+.card p{
+font-family:Arial,sans-serif;
+color:#d6d6d6;
+font-size:16px;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+/* PRECIO */
+
+.price{
+font-size:28px;
+font-weight:bold;
+margin-bottom:22px;
+color:#d4af37;
+}
+
+/* TANNAT DESTACADO */
+
+.premium-wine{
+border:
+1px solid rgba(212,175,55,.45);
+box-shadow:
+0 0 50px rgba(212,175,55,.12);
+}
+
+/* BADGE PREMIO */
+
+.award-badge{
+position:absolute;
+top:20px;
+right:20px;
+z-index:10;
+padding:10px 16px;
+background:
+linear-gradient(135deg,
+#d4af37,
+#f5d77a);
+color:#111;
+font-weight:bold;
+border-radius:40px;
+font-size:13px;
+box-shadow:
+0 10px 30px rgba(212,175,55,.25);
+}
+
+/* TAGS */
+
+.wine-tags{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.wine-tags span{
+padding:10px 14px;
+border-radius:40px;
+background:
+rgba(212,175,55,.1);
+border:
+1px solid rgba(212,175,55,.22);
+font-size:13px;
+font-family:Arial,sans-serif;
+}
+
+/* CLUB */
+
+.plans{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.plan{
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.04),
+rgba(255,255,255,.02)
+);
+border:
+1px solid rgba(212,175,55,.18);
+border-radius:28px;
+padding:36px;
+transition:.4s;
+}
+
+.plan:hover{
+transform:translateY(-10px);
+border-color:
+rgba(212,175,55,.4);
+}
+
+.plan h3{
+font-size:34px;
+margin-bottom:8px;
+}
+
+.plan ul{
+list-style:none;
+margin:20px 0;
+}
+
+.plan li{
+margin-bottom:12px;
+font-family:Arial,sans-serif;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:100px;
+padding:80px 30px 40px;
+background:#050505;
+border-top:
+1px solid rgba(212,175,55,.15);
+}
+
+.footer-grid{
+max-width:1400px;
+margin:auto;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+footer h4{
+margin-bottom:16px;
+font-size:22px;
+color:#f5e6b8;
+}
+
+footer p,
+footer a{
+display:block;
+margin-bottom:10px;
+font-family:Arial,sans-serif;
+color:#cfcfcf;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+font-family:Arial,sans-serif;
+color:#888;
+}
+
+/* HERO MÁS PREMIUM */
+
+.hero-right h1{
+font-size:74px;
+line-height:1;
+margin-bottom:22px;
+}
+
+.hero-right p{
+font-size:22px;
+line-height:1.9;
+}
+
+/* BOTÓN MÁS PREMIUM */
+
+.btn-gold{
+background:
+linear-gradient(
+135deg,
+#f0d77a,
+#d4af37
+);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.title{
+font-size:36px;
+}
+
+.card img{
+height:320px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.hero-right h1{
+font-size:42px;
+}
+
+.hero-right p{
+font-size:18px;
+}
+ 
 .hero{
 grid-template-columns:1fr;
 text-align:center;
