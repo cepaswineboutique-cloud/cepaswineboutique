@@ -493,6 +493,7 @@ grid-template-columns:repeat(3, 1fr);
 gap:32px;
 max-width:1400px;
 margin:auto;
+align-items:stretch;
 }
 
 /* TABLET */
@@ -557,12 +558,42 @@ margin-bottom:10px;
 color:#f5e6b8;
 }
 
-.card p{
-font-family:Arial,sans-serif;
-color:#d6d6d6;
-font-size:16px;
-line-height:1.8;
-margin-bottom:20px;
+/* =========================
+BOTONES DE LAS CARDS
+========================= */
+
+.card .btn-dark,
+.card .btn-gold{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+min-height:54px;
+text-align:center;
+margin-top:12px;
+}
+
+.card{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.card .price{
+margin-top:auto;
+}
+
+/* EVITA ENCIMAMIENTO EN MOBILE */
+
+@media(max-width:768px){
+
+.card .btn-dark,
+.card .btn-gold{
+font-size:15px;
+padding:14px 18px;
+line-height:1.4;
+}
+
 }
 
 /* PRECIO */
@@ -916,12 +947,15 @@ Experiencia de Cata
 
 </a>
  
-  <!-- PRECIO -->
-  <div class="price"></div>
+<a class="btn-gold" 
+href="https://wa.me/543425786817" 
+target="_blank">
+ 
+🍷 Pedir por WhatsApp
 
-  <!-- CTA -->
-  <a class="btn-gold" href="https://wa.me/543425786817" target="_blank">🍷 Pedir por WhatsApp</a>
- </div>
+</a>
+ 
+</div>
 
 <div class="card">
 <img src="ara-blend2024.jpeg" alt="Ára Blend">
